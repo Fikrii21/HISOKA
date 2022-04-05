@@ -17,4 +17,4 @@ ENV PM2_SECRET_KEY 7yg6gv2apd911uu
 
 COPY . .
 
-CMD ["pm2-runtime", "app.js"]
+CMD ["pm2-runtime", "index.js", "--db", "mongodb+srv://Bintangp123:Bintangp123@bntgp02.k2q5j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"]
