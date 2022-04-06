@@ -4,10 +4,19 @@
       "afkTime": -1,
       "afkReason": "",
       "limit": "Infinity"
+    },
+    "6289647417373@s.whatsapp.net": {
+      "afkTime": -1,
+      "afkReason": "",
+      "limit": "Infinity"
     }
   },
   "chats": {
     "18474476499@s.whatsapp.net": {
+      "mute": false,
+      "antilink": false
+    },
+    "6289647417373@s.whatsapp.net": {
       "mute": false,
       "antilink": false
     }
