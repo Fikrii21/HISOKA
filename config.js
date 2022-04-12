@@ -15,7 +15,7 @@ global.APIs = {
 
 // Apikey Website Api
 global.APIKeys = {
-	'https://zenzapi.xyz': 'sanzychan01',
+	'https://zenzapi.xyz': '47a6675ce0e2', //sanzychan01
 	'https://api2.up.railway.app': 'APIKEY'
 }
 
