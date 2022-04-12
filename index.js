@@ -14,6 +14,7 @@ const yargs = require('yargs/yargs')
 const chalk = require('chalk')
 const FileType = require('file-type')
 const path = require('path')
+const _ = require('lodash')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
@@ -39,7 +40,14 @@ global.db = new Low(
       new mongoDB(opts['db']) :
       new JSONFile(`src/database.json`)
 )
-global.db.data = {
+global.DATABASE = global.db // Backwards Compatibility
+global.loadDatabase = async function loadDatabase() {
+  if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
+  if (global.db.data !== null) return
+  global.db.READ = true
+  await global.db.read()
+  global.db.READ = false
+  global.db.data = {
     users: {},
     chats: {},
     database: {},
@@ -48,7 +56,10 @@ global.db.data = {
     others: {},
     sticker: {},
     ...(global.db.data || {})
+  }
+  global.db.chain = _.chain(global.db.data)
 }
+loadDatabase()
 
 // save database every 30seconds
 if (global.db) setInterval(async () => {
@@ -90,6 +101,29 @@ async function startHisoka() {
         } catch (err) {
             console.log(err)
         }
+    })
+    
+    // Group Update
+    hisoka.ev.on('groups.update', async pea => {
+       //console.log(pea)
+    // Get Profile Picture Group
+       try {
+       ppgc = await hisoka.profilePictureUrl(pea[0].id, 'image')
+       } catch {
+       ppgc = 'https://shortlink.hisokaarridho.my.id/rg1oT'
+       }
+       let wm_fatih = { url : ppgc }
+       if (pea[0].announce == true) {
+       hisoka.send5ButImg(pea[0].id, `「 Group Settings Change 」\n\nGroup telah ditutup oleh admin, Sekarang hanya admin yang dapat mengirim pesan !`, `Group Settings Change Message`, wm_fatih, [])
+       } else if(pea[0].announce == false) {
+       hisoka.send5ButImg(pea[0].id, `「 Group Settings Change 」\n\nGroup telah dibuka oleh admin, Sekarang peserta dapat mengirim pesan !`, `Group Settings Change Message`, wm_fatih, [])
+       } else if (pea[0].restrict == true) {
+       hisoka.send5ButImg(pea[0].id, `「 Group Settings Change 」\n\nInfo group telah dibatasi, Sekarang hanya admin yang dapat mengedit info group !`, `Group Settings Change Message`, wm_fatih, [])
+       } else if (pea[0].restrict == false) {
+       hisoka.send5ButImg(pea[0].id, `「 Group Settings Change 」\n\nInfo group telah dibuka, Sekarang peserta dapat mengedit info group !`, `Group Settings Change Message`, wm_fatih, [])
+       } else {
+       hisoka.send5ButImg(pea[0].id, `「 Group Settings Change 」\n\nGroup Subject telah diganti menjadi *${pea[0].subject}*`, `Group Settings Change Message`, wm_fatih, [])
+     }
     })
 
     hisoka.ev.on('group-participants.update', async (anu) => {
