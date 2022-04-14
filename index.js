@@ -147,15 +147,13 @@ async function startHisoka() {
                 }
 
                 if (anu.action == 'add') {
-                    hisoka.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `Welcome To 
-Semoga Kamu Senang Berada Disini
+                    hisoka.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `Welcome To ${metadata.subject}Semoga Kamu Senang Berada Disini@${num.split("@")[0]}`Semoga Kamu Senang Berada Disini
 Serta Jangan Lupa Untuk Membaca
-Dan Mematuhi Rules Yang Ada${metadata.subject} @${num.split("@")[0]}` })
+Dan Mematuhi Rules Yang Ada })
                 } else if (anu.action == 'remove') {
-                    hisoka.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `@${num.split("@")[0]} Leaving To 
-Tetap Putus Asa Jangan
+                    hisoka.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `@${num.split("@")[0]} Leaving To ${metadata.subject}Tetap Putus Asa Jangan
 Semangat Dan Jadilah Beban
-Keluarga 🤙🗿${metadata.subject}` })
+Keluarga 🤙🗿`})
                 }
             }
         } catch (err) {
