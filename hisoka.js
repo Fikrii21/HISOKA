@@ -533,11 +533,11 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
 	    case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/5ddaed6a3132f743a086c.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Dana/GoPay/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6281233738677 (Owner)\n\nDonate For Me : \n\n⭔ Paypal : https://www.paypal.me/Cakhaho\n⭔ Saweria : https://saweria.co/Fikrii21` }, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/5ddaed6a3132f743a086c.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 20k via E-Walet 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Dana/GoPay/pulsa\n\nMinat?\nhttps://wa.me/6281233738677 (Owner)\n\nDonate For Me : \n\n⭔ Saweria : https://saweria.co/Fikrii21` }, { quoted: m })
             }
             break
             case 'sc': {
-                m.reply('Script : https://github.com/Fikrii21/HISOKA\n\n Dont Forget Give Star\n\nDonate : 6281233738677 (Dana)\nSaweria : https://saweria.co/Fikrii21\n\n\n Dont Forget Donate')
+                m.reply('Script : https://github.com/Fikrii21/HISOKA\n\n Dont Forget Give Star\n\nDonate : 6281233738677 (Dana)\nSaweria : https://saweria.co/Fikrii21\n\n Dont Forget Donate')
             }
             break
             case 'chat': {
