@@ -533,14 +533,16 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
 	    case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/72b4a6605c4b3de92ad5a.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n SEWA BOT & JADI BOT\n⭔ .┌── 「 *Sewa Bot* 」
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/72b4a6605c4b3de92ad5a.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n SEWA BOT & JADI BOT\n⭔
+┌── 「 *Sewa Bot* 」
 ├ Sewa 5k/minggu
 ├ Sewa 10k/bln
 ├ Sewa Permanen 25k
-└───────\n\n⭔ ┌── 「 *Jadi Bot* 」
+└───────\n\n⭔ 
+┌── 「 *Jadi Bot* 」
 ├ Jadi Bot + Owner 25k
 ├ Jasa Run Bot 15k
-└───────\n\nPayment can be via Dana/GoPay/pulsa\n\nMinat?\nhttps://wa.me/6281233738677 (Owner)\n\nDonate For Me : \n\n⭔ Saweria : https://saweria.co/Fikrii21` }, { quoted: m })
+└───────\n\nPayment Dana/GoPay/pulsa/Qrs\n\nMinat?\nhttps://wa.me/6281233738677 (Owner)\n\nDonate For Me : \n\n⭔ Saweria : https://saweria.co/Fikrii21` }, { quoted: m })
             }
             break
             case 'sc': {
