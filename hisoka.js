@@ -537,7 +537,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
             case 'sc': {
-                m.reply('Script : https://github.com/Fikrii21/Hisoka-Morou\n\n Dont Forget Give Star\n\nDonate : 6281615075793 (Link Aja)\nSaweria : https://saweria.co/DikaArdnt\nPaypal : https://www.paypal.me/Cakhaho\n\n Dont Forget Donate')
+                m.reply('Script : https://github.com/Fikrii21/HISOKA\n\n Dont Forget Give Star\n\nDonate : 6281233738677 (Dana)\nSaweria : https://saweria.co/Fikrii21\n\n\n Dont Forget Donate')
             }
             break
             case 'chat': {
@@ -1139,12 +1139,12 @@ break
                     let btn = [{
                                 urlButton: {
                                     displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    url: 'https://github.com/Fikrii21/HISOKA'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 882-9202-4190'
+                                    phoneNumber: '+62 812-3373-8677'
                                 }
                             }, {
                                 quickReplyButton: {
