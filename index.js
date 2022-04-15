@@ -148,6 +148,7 @@ async function startHisoka() {
 
                 if (anu.action == 'add') {
                     hisoka.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `Welcome To ${metadata.subject}@${num.split("@")[0]}
+
 Intro Dulu Yuk Biar Keren 🤙
 
 📛 Nama : 
@@ -160,6 +161,7 @@ Dan Mematuhi Rules Yang Ada`})
 
                 } else if (anu.action == 'remove') {
                     hisoka.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `@${num.split("@")[0]} Leaving To ${metadata.subject} 
+
 Tetap Putus Asa Jangan
 Semangat Dan Jadilah Beban
 Keluarga 🤙🗿`})
